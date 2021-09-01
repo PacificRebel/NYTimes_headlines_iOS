@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+//start of Plist section
+
 private var API_KEY: String {
 
     get {
@@ -22,6 +24,9 @@ let plist = NSDictionary(contentsOfFile: filePath)
     }
 }
 
+//end of Plist section
+
+//start of API call properties section
 struct Response: Codable {
     var results: [Result]
 }
@@ -31,7 +36,8 @@ struct Result: Codable {
     var abstract: String
     var url: String
 }
-
+//end of API call properties section
+    
 struct ContentView: View {
     @State var results = [Result]()
     
@@ -49,7 +55,7 @@ struct ContentView: View {
         .onAppear(perform: loadData)
     }
 
-
+//start of actual API call
     func loadData() {
         
         guard let url = URL(string: "https://api.nytimes.com/svc/topstories/v2/home.json?api-key=\(API_KEY)") else {
@@ -70,10 +76,13 @@ struct ContentView: View {
             print("Fetch failed \(error?.localizedDescription ?? "Unknown error")")
         }.resume()
     }
+// end of API call
 }
 
+//preview
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
     }
   }
+

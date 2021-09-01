@@ -51,13 +51,14 @@ struct ContentView: View {
             .foregroundColor(.black)
         
         List(results, id: \.title) { item in VStack(alignment: .leading) {
-
-            Text(item.title)
-                .font(.headline)
+            Link(item.title,
+                 destination: URL(string: item.url)!)
+//            Text(item.title)
+//                .font(.headline)
             Text(item.abstract)
                 .font(.subheadline)
-        
-                Text(item.url)
+//            Text(item.url)
+//                .font(.subheadline)
             }
         }
         .onAppear(perform: loadData)
@@ -92,6 +93,7 @@ struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
     }
-//end of Contentview
+//end of Preview
   }
+//end of Contentview
 

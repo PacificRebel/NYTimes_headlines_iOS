@@ -37,11 +37,19 @@ struct Result: Codable {
     var url: String
 }
 //end of API call properties section
-    
+
+//start of view section
 struct ContentView: View {
     @State var results = [Result]()
     
      var body: some View {
+        Spacer()
+        Spacer()
+        Text("New York Times top stories")
+            .font(.title2)
+            .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+            .foregroundColor(.black)
+        
         List(results, id: \.title) { item in VStack(alignment: .leading) {
 
             Text(item.title)
@@ -84,5 +92,6 @@ struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
     }
+//end of Contentview
   }
 

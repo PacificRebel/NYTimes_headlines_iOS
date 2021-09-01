@@ -50,9 +50,16 @@ struct ContentView: View {
             .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
             .foregroundColor(.black)
         
+        Image("poweredby_nytimes_150b")
+//                    .resizable()
+//                    .scaledToFit()
+     
+        
         List(results, id: \.title) { item in VStack(alignment: .leading) {
             Link(item.title,
                  destination: URL(string: item.url)!)
+                .font(.title2)
+                .foregroundColor(.black)
 //            Text(item.title)
 //                .font(.headline)
             Text(item.abstract)

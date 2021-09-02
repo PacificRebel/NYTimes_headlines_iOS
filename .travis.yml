@@ -1,0 +1,5 @@
+language: swift
+os: osx
+xcode_project: NYTimes_headlines.xcode_project
+xcode_scheme: NYTimes_headlinesTests
+xcode_destination: platform=iOS Simulator,OS=12.5.4,name=iPhone 12

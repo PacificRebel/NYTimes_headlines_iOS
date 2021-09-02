@@ -1,5 +1,5 @@
 language: swift
 os: osx
-xcode_workspace: NYTimes_headlines.xcworkspace
+xcode_workspace: /NYTimes_headlines.xcworkspace
 xcode_scheme: NYTimes_headlinesTests
 xcode_destination: platform=iOS Simulator,OS=14.7,name=iPhone 12

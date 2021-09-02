@@ -1,6 +1,6 @@
 language: swift
 os: osx
 osx_image: xcode12.5
-xcode_project: NYTimes_headlines.xcodeproject
+xcode_project: /NYTimes_headlines.xcodeproject
 xcode_scheme: NYTimes_headlinesTests
 xcode_destination: platform=iOS Simulator,OS=14.0,name=iPhone 12

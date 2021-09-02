@@ -1,4 +1,6 @@
 language: objective-c
+before_script: travis/before_script.sh
+script: travis/script.sh
 os: osx
 osx_image: xcode12.5
 xcode_project: NYTimes_headlines.xcodeproj

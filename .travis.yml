@@ -2,4 +2,5 @@ language: objective-c
 os: osx
 osx_image: xcode12.5
 xcode_project: NYTimes_headlines.xcodeproj
+xcode_scheme: NYTimes_headlinesTests
 xcode_destination: platform=iOS Simulator,OS=14.0,name=iPhone 12
